@@ -11,6 +11,7 @@ import os.path as fs
 affirmative = ["true", "yes", "si", "sí"]
 negative = ["false", "no"]
 
+# Hardcoded names woo
 pdf_input = "carga_habil.pdf"
 csv_output = "carga_habil.csv"
 
@@ -54,6 +55,10 @@ if columns is None or len(values) == 0:
     print("No se pudo continuar! (no hay valores por procesar)")
 else:
     result = pd.DataFrame(data=values, columns=columns)
+    # Show complete table
+    pd.set_option('display.max_rows', len(values) + 1)
+    pd.set_option('display.max_columns', len(columns) + 1)
+    pd.set_option('display.width', 1000)
     print("Resultado:")
     print(result)
 
