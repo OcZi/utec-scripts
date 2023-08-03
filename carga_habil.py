@@ -62,5 +62,5 @@ else:
     print("Resultado:")
     print(result)
 
-    result.to_csv(csv_output)
+    result.to_csv(csv_output, index=False)
     print("Resultado guardado en", csv_output)
