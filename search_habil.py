@@ -95,7 +95,7 @@ class CursoHabil:
                 schedule_map[day] = []
             schedule_map[day].append(horario[5:] + ": " + entrada[1])
 
-        __show_schedule__(schedule_map, f"Horarios - {teacher} [{len(schedule_map)}]")
+        __show_schedule__(__sort_schedule__(schedule_map, 0), f"Horarios - {teacher} [{len(schedule_map)}]")
 
 
 if __name__ == "__main__":
