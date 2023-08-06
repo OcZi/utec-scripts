@@ -1,3 +1,8 @@
+"""
+Search hábil script:
+    Load a "carga_habil.csv" to do search operations.
+"""
+
 import os.path as fs
 
 import fire
